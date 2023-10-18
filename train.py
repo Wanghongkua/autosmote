@@ -52,7 +52,7 @@ def get_parser():
         "--metric",
         default="macro_f1",
         type=str,
-        choices=["macro_f1", "mcc"]
+        choices=["macro_f1", "mcc", "auroc"]
     )
 
     # Args for RL training

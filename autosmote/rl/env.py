@@ -1,6 +1,6 @@
 import numpy as np
 import gym
-from sklearn.metrics import f1_score, matthews_corrcoef
+from sklearn.metrics import f1_score, matthews_corrcoef, roc_auc_score
 from sklearn.metrics.pairwise import euclidean_distances
 
 class Env:
@@ -36,6 +36,12 @@ class Env:
             result = f1_score(self.val_y, pred_y, average="macro")
         elif self.metric == "mcc":
             result = matthews_corrcoef(self.val_y, pred_y)
+        elif self.metric == "auroc":
+            if hasattr(self.clf, 'predict_proba'):
+                pred_y_proba = self.clf.predict_proba(self.val_X)[:, 1]
+            else:
+                pred_y_proba = pred_y
+            result = roc_auc_score(self.val_y, pred_y_proba)
         return result
 
 class GymWrapper(gym.Env):
