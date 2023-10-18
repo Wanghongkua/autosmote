@@ -25,7 +25,7 @@ def get_parser():
 
     parser.add_argument(
         "--dataset",
-        default="2022-10-06 NHANES 1999-2010.csv",
+        default="imp_knn_.p",
         choices=[
             "phoneme",
             "eeg-eye-state",
@@ -33,7 +33,7 @@ def get_parser():
             "electricity",
             "MagicTelescope",
             "PhishingWebsites",
-            "2022-10-06 NHANES 1999-2010.csv"
+            "imp_ii_.p", "imp_median_.p", "imp_knn_.p", "imp_gain_.p", "imp_MIRACLE_.p", "imp_MIWAE.p",
         ],
         type=str
     )
@@ -46,7 +46,7 @@ def get_parser():
         "--clf",
         default="svm",
         type=str,
-        choices=["knn", "svm", "dt", "adaboost"]
+        choices=["lr", "knn", "svm", "dt", "adaboost"]
     )
     parser.add_argument(
         "--metric",

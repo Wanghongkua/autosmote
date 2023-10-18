@@ -13,11 +13,12 @@ def get_data(name, val_ratio=0.2, test_raito=0.2, undersample_ratio=100):
     from sklearn.compose import make_column_selector as selector
     from sklearn import preprocessing
     version=1
-    if name == "2022-10-06 NHANES 1999-2010.csv":
+    imp_file_names = ["imp_ii_.p", "imp_median_.p", "imp_knn_.p", "imp_gain_.p", "imp_MIRACLE_.p", "imp_MIWAE.p"]
+    if name in imp_file_names:
         import pickle
         import os
         import pandas as pd
-        file =  open(os.path.join("data", "interim", "imp_knn_.p"), "rb")
+        file =  open(os.path.join("data", "interim", name), "rb")
         X, y = pickle.load(file)
         X = X.to_numpy()
         file.close()

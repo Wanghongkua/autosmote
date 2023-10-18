@@ -2,12 +2,14 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.linear_model import LogisticRegression
 
 name2f = {
     "knn": KNeighborsClassifier(),
-    "svm": LinearSVC(random_state=0),
+    "svm": LinearSVC(random_state=42),
     "dt": DecisionTreeClassifier(),
-    "adaboost": AdaBoostClassifier(random_state=0),
+    "adaboost": AdaBoostClassifier(random_state=42),
+    "lr": LogisticRegression(random_state=42)
 }
 
 def get_clf(name):
