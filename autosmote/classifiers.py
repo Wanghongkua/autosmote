@@ -3,6 +3,7 @@ from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.neural_network import MLPClassifier
 
 name2f = {
     "knn": KNeighborsClassifier(),
@@ -10,6 +11,7 @@ name2f = {
     "dt": DecisionTreeClassifier(),
     "adaboost": AdaBoostClassifier(random_state=42),
     "lr": LogisticRegression(random_state=42)
+    "mlp": MLPClassifier(random_state=42, max_iter=1000)
 }
 
 def get_clf(name):
