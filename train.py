@@ -46,7 +46,7 @@ def get_parser():
         "--clf",
         default="svm",
         type=str,
-        choices=["lr", "knn", "svm", "dt", "adaboost"]
+        choices=["lr", "knn", "svm", "dt", "adaboost", "mlp"]
     )
     parser.add_argument(
         "--metric",
