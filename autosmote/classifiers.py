@@ -10,7 +10,7 @@ name2f = {
     "svm": LinearSVC(random_state=42),
     "dt": DecisionTreeClassifier(),
     "adaboost": AdaBoostClassifier(random_state=42),
-    "lr": LogisticRegression(random_state=42)
+    "lr": LogisticRegression(random_state=42),
     "mlp": MLPClassifier(random_state=42, max_iter=1000)
 }
 
