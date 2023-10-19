@@ -13,7 +13,7 @@ def get_data(name, val_ratio=0.2, test_raito=0.2, undersample_ratio=100):
     from sklearn.compose import make_column_selector as selector
     from sklearn import preprocessing
     version=1
-    imp_file_names = ["imp_ii_.p", "imp_median_.p", "imp_knn_.p", "imp_gain_.p", "imp_MIRACLE_.p", "imp_MIWAE.p"]
+    imp_file_names = ["imp_ii_.p", "imp_median_.p", "imp_knn_.p", "imp_gain_.p", "imp_MIRACLE_.p", "imp_MIWAE_.p"]
     if name in imp_file_names:
         import pickle
         import os
