@@ -33,7 +33,7 @@ def get_parser():
             "electricity",
             "MagicTelescope",
             "PhishingWebsites",
-            "imp_ii_.p", "imp_median_.p", "imp_knn_.p", "imp_gain_.p", "imp_MIRACLE_.p", "imp_MIWAE.p",
+            "imp_ii_.p", "imp_median_.p", "imp_knn_.p", "imp_gain_.p", "imp_MIRACLE_.p", "imp_MIWAE_.p",
         ],
         type=str
     )
